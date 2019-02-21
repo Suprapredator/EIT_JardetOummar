@@ -1,9 +1,0 @@
-1	John	John	NP	PROPN	_	_	2	SUJ_V	_	_
-2	ate	eat	V	VERB	_	_	_	_	_	_
-3	dicious	dicious	NC	NOUN	_	_	4	ADJPRENSUB	_	_
-4	pizza	pizza	NC	NOUN	_	_	2	COD_V	_	_
-5	with	with	PREP	ADP	_	_	6	PREPSUB	_	_
-6	friends	friend	NC	NOUN	_	_	4	COMPDUNOM	_	_
-7	.	.	PONCTU	SENT	_	_	_	_	_	_
-
-
