@@ -3,6 +3,9 @@
 import sys
 from collections import Counter
 
+def getPart(word, part):
+	return word.split("/")[part]
+
 def affichage(fichier_in, fichier_out):
 
 	texte_base = open(fichier_in, "r")
@@ -17,21 +20,48 @@ def affichage(fichier_in, fichier_out):
 
 	# a partir de la, on a une liste de tous les mots colles a leur tag.
 	
-	namedEntitiesWithNumber = []
-	myCounter = Counter(allWordsTagged)
-	for word in allWordsTagged:
-		if(word.split("/")[1] != 'O'):
-			namedEntitiesWithNumber.append(word +"/"+str(myCounter[word]))
-
 	namedEntities = []
-	myOtherCounter = Counter(namedEntitiesWithNumber)
+	i = 0
+	curEntity = ''
+	while i < (len(allWordsTagged) - 1):
+		curWord = allWordsTagged[i]
+		tag = getPart(curWord, 1)
+		if(tag == 'O'):
+			i = i+1;
+		else:
+			curEntity = getPart(curWord, 0)
+			j = i + 1
+			if (j < len(allWordsTagged)):
+				nextWord = allWordsTagged[j]
+
+				while (tag == getPart(nextWord, 1)):
+					curEntity = curEntity + " " +getPart(nextWord, 0)
+					if (j < (len(allWordsTagged) - 1)):
+						j = j + 1
+						nextWord = allWordsTagged[j]
+					else:
+						break
+			curEntity = curEntity +"/"+tag
+			namedEntities.append(curEntity)
+			curEntity = ''
+			i = j
+
+
+	entityCounter = Counter(namedEntities)
+
+	namedEntitiesWithNumber = []
+	for elem in namedEntities:
+		if (not elem in namedEntitiesWithNumber):
+			namedEntitiesWithNumber.append(elem +"/"+str(entityCounter[elem]))
+
+	tabEntities = []
 	for elem in set(namedEntitiesWithNumber):
-		namedEntities.append(elem.split('/'))
+		tabEntities.append(elem.split('/'))
 
-	tab.write("Entité nommée\t\tType\t\t\tNombre d’occurrences\t\tProportion dans le texte (%)\n")
-	for ent in namedEntities:
+	tab.write('{:<40s}{:>15s}{:>25s}{:>38s}'.format("Entité nommée","Type","Nombre d’occurrences","Proportion dans le texte (%)\n\n"))
+	for ent in tabEntities:
 
-		tab.write(ent[0]+"\t\t\t\t"+ent[1]+"\t\t\t"+ent[2]+"\t\t\t\t\t\t\t"+str(int(ent[2])/sum(myOtherCounter.values()))+" ("+ent[2]+"/"+str(sum(myOtherCounter.values()))+")\n")
+		tab.write('{:<40s}{:>15s}{:>25s}{:>30.2f}'.format(ent[0], ent[1], ent[2], int(ent[2])/sum(entityCounter.values()))+" ("+ent[2]+"/"+str(sum(entityCounter.values()))+")\n")
 
 if __name__ == '__main__':
 	affichage(sys.argv[1], sys.argv[2])
