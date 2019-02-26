@@ -1,0 +1,8 @@
+125	Numex.NUMBER	1	11%
+National Association	Organization.ORGANIZATION	1	11%
+Rust	Organization.ORGANIZATION	2	22%
+Boca	Person.PERSON	1	11%
+Hoosier	Person.PERSON	1	11%
+Boca Raton	Location.LOCATION	1	11%
+Indianapolis	Location.LOCATION	1	11%
+Rust Belt	Location.LOCATION	1	11%
