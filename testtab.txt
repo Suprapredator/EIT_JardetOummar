@@ -1,9 +1,0 @@
-Entité nommée                                      Type     Nombre d’occurrences        Proportion dans le texte (%)
-
-Federal Reserve Bank of New York           ORGANIZATION                        1                          0.12 (1/8)
-Treasury                                   ORGANIZATION                        1                          0.12 (1/8)
-Lehman Brothers                            ORGANIZATION                        2                          0.25 (2/8)
-Timothy R. Geithner                              PERSON                        1                          0.12 (1/8)
-New York Fed                               ORGANIZATION                        1                          0.12 (1/8)
-Henry M. Paulson Jr.                             PERSON                        1                          0.12 (1/8)
-Federal Reserve                            ORGANIZATION                        1                          0.12 (1/8)
