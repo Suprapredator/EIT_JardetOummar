@@ -3,6 +3,9 @@
 import sys
 from collections import Counter
 
+import V_stdout2evaluate as eva
+
+
 def getPart(word, part):
 	return word.split("/")[part]
 
@@ -17,6 +20,8 @@ def affichage(fichier_in, fichier_out):
 	for line in lines:
 		line = line.split()
 		allWordsTagged.extend(line)
+
+	eva.makeEvaluable(allWordsTagged, "std.evaluate.txt")
 
 	# a partir de la, on a une liste de tous les mots colles a leur tag.
 	
@@ -45,7 +50,6 @@ def affichage(fichier_in, fichier_out):
 			namedEntities.append(curEntity)
 			curEntity = ''
 			i = j
-
 
 	entityCounter = Counter(namedEntities)
 

@@ -2,11 +2,11 @@ from lxml import etree
 import numpy as np
 
 def transformer():
-	lima_res = open("test2.txt", "r")
-	stdfd_res = open("sampleoutput.txt", "r")
+	lima_res = open("reference.out.standford.tab", "r")
+	stdfd_res = open("reference.out.standford.tab", "r")
 
 	lima_out = open ("lima.txt", "w")
-	stdfd_out = open ("stdfd.txt", "w")
+	stdfd_out = open ("stdfd.evaluate.txt", "w")
 
 	# etiquettes
 	fichier_etiquette = open("correspondance_ner.txt")
@@ -20,7 +20,7 @@ def transformer():
 			eti_std.append(elem.split()[1])
 
 
-	"""
+	
 	# on fait en sorte que le curseur passe les 2 premières lignes du fichier de standford
 	# car elles ne contiennent aucune info utile
 	stdfd_res.readline()
@@ -30,21 +30,21 @@ def transformer():
 
 	
 	for line in stdfd_res.readlines():
-	entity_line = line.split()
-	i = 0
-	entity = []
-	while entity_line[i] not in eti_std:
-		entity.append(entity_line[i])
-		i = i + 1
-	tag = entity_line[i]
+		entity_line = line.split()
+		i = 0
+		entity = []
+		while entity_line[i] not in eti_std:
+			entity.append(entity_line[i])
+			i = i + 1
+		tag = entity_line[i]
 	
-	for elem in entity:
-		stdfd_out.write(elem+"_"+tag+" ")
-	"""
+		for elem in entity:
+			stdfd_out.write(elem+"_"+tag+" ")
+	
 
-	#ecriture standford
+	"""#ecriture standford
 	for line in stdfd_res.readlines(): 
-		stdfd_out.write(line.replace("/", "_"))
+		stdfd_out.write(line.replace("/", "_"))"""
 
 
 	# ecriture lima
