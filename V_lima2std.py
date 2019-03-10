@@ -18,5 +18,19 @@ def remplace_etiquette(fichier_out):
 			line = line.replace(eti_lima[i], eti_std[i])
 		xml_out.write(line)
 
+def remplace_etiquette_conll(fichier):
+    Xfile = open(fichier+".txt.namedEntity","r")
+    Yfile = open(fichier+".txt.trans.namedEntity","w")
+    
+    fichier_etiquette = open("correspondance_ner.txt")
+    etiquettes = fichier_etiquette.readlines();
+    text = Xfile.read()
+    
+    for elem in etiquettes:
+        buff = elem.replace('\n','').split(' ')
+        text = text.replace(buff[0],buff[1])
+    
+    Yfile.write(text)
+    
 if __name__ == '__main__':
-	remplace_etiquette(sys.argv[1])
+	remplace_etiquette_conll(sys.argv[1])
