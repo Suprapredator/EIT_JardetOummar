@@ -1,9 +1,8 @@
 from lxml import etree
 import numpy as np
+import sys
 
-tree = etree.parse("wsj_0010_sample.txt.se.xml")
-#tree = etree.parse("wsj_0010_sample.txt.disambiguated.xml")
-#tree = etree.parse("formal-tst.NE.key.04oct95_sample.txt.se.xml")
+tree = etree.parse("fichiers/wsj_0010_sample.txt.se.xml")
 root = tree.getroot()
 
 entities = []
@@ -14,8 +13,6 @@ for manitou in root:
 	entities.append(entity)
 
 numpyEntities = np.array(entities)
-print(numpyEntities.shape)
-
 
 lignes = []
 entitesVues = []
@@ -31,7 +28,7 @@ for i in range(0,len(numpyEntities)):
 		ligne.append(str(int(nbOcc*100/len(numpyEntities)))+"%")
 		lignes.append(ligne)
 
-file = open("test2.txt","w")
+file = open("lima.output.txt","w")
 
 for ligne in lignes:
 	writing_ligne = ligne[0]+"\t"+ligne[1]+"\t"+ligne[2]+"\t"+ligne[3]+"\n"

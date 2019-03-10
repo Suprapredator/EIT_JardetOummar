@@ -1,7 +1,7 @@
 import sys
 
 def remplace_etiquette(fichier_out):
-	xml_base = open("wsj_0010_sample.txt.se.xml","r") #
+	xml_base = open("wsj_0010_sample.txt.se.xml","r")
 	xml_out = open(fichier_out,"w")
 
 	fichier_etiquette = open("correspondance_ner.txt")

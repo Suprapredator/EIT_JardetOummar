@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vertices>
+<vertex id="2" position="1" length="4" >
+  <lemma>when</lemma>
+  <macro>ADV</macro>
+  <micro>ADV</micro>
+  <pred id="0"/>
+</vertex>
+<vertex id="3" position="6" length="2" >
+  <lemma>it</lemma>
+  <macro>PRON</macro>
+  <micro>PRON</micro>
+  <pred id="2"/>
+</vertex>
+<vertex id="4" position="8" length="2" >
+  <lemma>be</lemma>
+  <macro>V</macro>
+  <micro>VERB</micro>
+  <pred id="3"/>
+</vertex>
+<vertex id="5" position="11" length="4" >
+  <lemma>time</lemma>
+  <macro>NC</macro>
+  <micro>NOUN</micro>
+  <pred id="4"/>
+</vertex>
+<vertex id="6" position="16" length="3" >
+  <lemma>for</lemma>
+  <macro>PREP</macro>
+  <micro>ADP</micro>
+  <pred id="5"/>
+</vertex>
+<vertex id="7" position="20" length="5" >
+  <lemma>their</lemma>
+  <macro>PRON</macro>
+  <micro>PRON</micro>
+  <pred id="6"/>
+</vertex>
+<vertex id="8" position="26" length="8" >
+  <lemma>biannual</lemma>
+  <macro>ADJ</macro>
+  <micro>ADJ</micro>
+  <pred id="7"/>
+</vertex>
+<vertex id="9" position="35" length="6" >
+  <lemma>powwow</lemma>
+  <macro>NC</macro>
+  <micro>NOUN</micro>
+  <pred id="8"/>
+</vertex>
+<vertex id="10" position="41" length="1" >
+  <lemma>,</lemma>
+  <macro>PONCTU</macro>
+  <micro>COMMA</micro>
+  <pred id="9"/>
+</vertex>
+<vertex id="11" position="43" length="3" >
+  <lemma>the</lemma>
+  <macro>DET</macro>
+  <micro>DET</micro>
+  <pred id="10"/>
+</vertex>
+<vertex id="12" position="47" length="6" >
+  <lemma>nation</lemma>
+  <macro>NC</macro>
+  <micro>NOUN</micro>
+  <pred id="11"/>
+</vertex>
+<vertex id="13" position="56" length="13" >
+  <lemma>manufacturing</lemma>
+  <macro>NC</macro>
+  <micro>NOUN</micro>
+  <pred id="12"/>
+</vertex>
+<vertex id="14" position="70" length="6" >
+  <lemma>titan</lemma>
+  <macro>NC</macro>
+  <micro>NOUN</micro>
+  <pred id="13"/>
+</vertex>
+<vertex id="15" position="77" length="9" >
+  <lemma>typically</lemma>
+  <macro>ADV</macro>
+  <micro>ADV</micro>
+  <pred id="14"/>
+</vertex>
+<vertex id="16" position="87" length="7" >
+  <lemma>jet off</lemma>
+  <macro>V</macro>
+  <micro>VERB</micro>
+  <pred id="15"/>
+</vertex>
+<vertex id="17" position="95" length="2" >
+  <lemma>to</lemma>
+  <macro>PREP</macro>
+  <micro>ADP</micro>
+  <pred id="16"/>
+</vertex>
+<vertex id="18" position="98" length="3" >
+  <lemma>the</lemma>
+  <macro>DET</macro>
+  <micro>DET</micro>
+  <pred id="17"/>
+</vertex>
+<vertex id="19" position="102" length="5" >
+  <lemma>sunny</lemma>
+  <macro>ADJ</macro>
+  <micro>ADJ</micro>
+  <pred id="18"/>
+</vertex>
+<vertex id="20" position="108" length="8" >
+  <lemma>confines</lemma>
+  <macro>NC</macro>
+  <micro>NOUN</micro>
+  <pred id="19"/>
+</vertex>
+<vertex id="21" position="117" length="2" >
+  <lemma>of</lemma>
+  <macro>PREP</macro>
+  <micro>ADP</micro>
+  <pred id="20"/>
+</vertex>
+<vertex id="22" position="120" length="6" >
+  <lemma>resort</lemma>
+  <macro>NC</macro>
+  <micro>NOUN</micro>
+  <pred id="21"/>
+</vertex>
+<vertex id="23" position="127" length="5" >
+  <lemma>town</lemma>
+  <macro>NC</macro>
+  <micro>NOUN</micro>
+  <pred id="22"/>
+</vertex>
+<vertex id="24" position="133" length="4" >
+  <lemma>like</lemma>
+  <macro>PREP</macro>
+  <micro>ADP</micro>
+  <pred id="23"/>
+</vertex>
+<vertex id="25" position="138" length="10" >
+  <lemma>Boca Raton</lemma>
+  <macro>NP</macro>
+  <micro>PROPN</micro>
+  <pred id="24"/>
+</vertex>
+<vertex id="26" position="149" length="3" >
+  <lemma>and</lemma>
+  <macro>CONJ</macro>
+  <micro>CONJ</micro>
+  <pred id="25"/>
+</vertex>
+<vertex id="27" position="153" length="11" >
+  <lemma>Hot Springs</lemma>
+  <macro>NP</macro>
+  <micro>PROPN</micro>
+  <pred id="26"/>
+</vertex>
+<vertex id="28" position="164" length="1" >
+  <lemma>.</lemma>
+  <macro>PONCTU</macro>
+  <micro>SENT</micro>
+  <pred id="27"/>
+</vertex>
+</vertices>

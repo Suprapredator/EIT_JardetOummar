@@ -1,0 +1,21 @@
+<specific_entities>
+<specific_entity>
+  <string>Boca</string>
+  <position>138</position>
+  <length>4</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Boca</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Boca Raton</string>
+  <position>138</position>
+  <length>10</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>Boca Raton</value>
+  </normalization>
+</specific_entity>
+</specific_entities>
