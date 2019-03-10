@@ -4,6 +4,7 @@ import sys
 file = open(sys.argv[1]+".txt.conll","r")
 Xfile = open(sys.argv[1]+".txt.pos.lima","w")
 
+
 lignes = file.readlines()
 for i in range(len(lignes)):
 	lignes[i] = lignes[i].split('\t')
