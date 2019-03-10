@@ -3,7 +3,7 @@ import numpy as np
 
 def transformer():
 	lima_res = open("test2.txt", "r")
-	stdfd_res = open("stdfd.output.txt", "r")
+	stdfd_res = open("sampleoutput.txt", "r")
 
 	lima_out = open ("lima.txt", "w")
 	stdfd_out = open ("stdfd.txt", "w")
@@ -19,23 +19,33 @@ def transformer():
 		if (len(elem.split()) > 1):
 			eti_std.append(elem.split()[1])
 
+
+	"""
 	# on fait en sorte que le curseur passe les 2 premières lignes du fichier de standford
 	# car elles ne contiennent aucune info utile
 	stdfd_res.readline()
 	stdfd_res.readline()
 
 	# ecriture standford
+
+	
 	for line in stdfd_res.readlines():
-		entity_line = line.split()
-		i = 0
-		entity = []
-		while entity_line[i] not in eti_std:
-			entity.append(entity_line[i])
-			i = i + 1
-		tag = entity_line[i]
-		
-		for elem in entity:
-			stdfd_out.write(elem+"_"+tag+" ")
+	entity_line = line.split()
+	i = 0
+	entity = []
+	while entity_line[i] not in eti_std:
+		entity.append(entity_line[i])
+		i = i + 1
+	tag = entity_line[i]
+	
+	for elem in entity:
+		stdfd_out.write(elem+"_"+tag+" ")
+	"""
+
+	#ecriture standford
+	for line in stdfd_res.readlines(): 
+		stdfd_out.write(line.replace("/", "_"))
+
 
 	# ecriture lima
 	for line in lima_res.readlines():
