@@ -2,7 +2,7 @@ from lxml import etree
 import numpy as np
 import sys
 
-tree = etree.parse("fichiers/wsj_0010_sample.txt.se.xml")
+tree = etree.parse(sys.argv[1])
 root = tree.getroot()
 
 entities = []
